@@ -2,13 +2,14 @@
 
 .button, button {
     background-color: $color-link;
+    font-size: .8em;
     color: white;
     text-decoration: none;
     padding: 1em;
     display: inline-block;
     transition: 250ms ease;
-    border-radius: .5em;
-    margin: 1em 0;
+    border-radius: 50px;
+    margin: 1em .5em;
 
     &:hover {
         background-color: $color-link-dark;

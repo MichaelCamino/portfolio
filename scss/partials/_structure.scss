@@ -49,6 +49,11 @@
         }    
 }
 
+.site-main {
+    position: relative;
+    overflow: hidden;
+}
+
 section {
     padding: 4em 0;
     min-height: 100vh;
@@ -56,22 +61,119 @@ section {
     align-items: center;
 }
 
+
+
 /* HERO SECTION */
 
 .hero {
-    background: black;
-    min-height: 100vh;
     text-align: center;
     display: grid;
     place-items: center;
     padding: 6em;
+    width: 100%;
+    height: 100vh;
     color: white;
+    position: relative;
+    z-index: 0;
     h1 {
         margin-bottom: .25em;
+        font-family: $font-family-sans;
+        font-weight: 900;
         color: white;
+        font-size: 4em;
+        letter-spacing: 5px;
     }
 
     p {
         margin: 1em auto;
     }
+
+    .bg-sky {
+        position: absolute;
+        top: -1em;
+        left: 0;
+        z-index: -20;
+    }
+
+    .bg-stars {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .bg-moon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -11;
+    }
+
+    .bg-water {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
+
+    .bg-front {
+        position: absolute;
+        top: 3em;
+        left: 0;
+        z-index: 10;
+    }
+
+    .bg-middle {
+        position: absolute;
+        top: 1em;
+        left: 0;
+        z-index: 4;
+    }
+
+    .bg-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
+
+    .bg-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
+
+    .bg-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
+
+    .bg-mountains {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .bg-treeleft {
+        position: absolute;
+        top: 0;
+        left: -1em;
+        z-index: 10;
+    }
+
+    .bg-treeright {
+        position: absolute;
+        top: 0;
+        left: -1em;
+        z-index: 10;
+        
+    }
+}
+
+#section-1 {
+    position: relative;
+    z-index: -20;
 }
