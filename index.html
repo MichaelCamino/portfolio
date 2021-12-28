@@ -30,15 +30,16 @@
                 <span class="hide-visually">Menu</span>
                 <svg width="30" height="30">
                     <title>Menu</title>
-                    <rect class="menubar-top" y="0" width="30" height="3"></rect>
-                    <rect class="menubar-middle" y="8" width="30" height="3"></rect>
-                    <rect class="menubar-bottom " y="16" width="30" height="3"></rect>
+                    <rect class="menubar-top" y="0" width="30" height="1"></rect>
+                    <rect class="menubar-middle" y="8" width="30" height="1"></rect>
+                    <rect class="menubar-bottom " y="16" width="30" height="1"></rect>
                 </svg>
             </button>
             <ul>
-                <li class="home"><a href="index.html">Home</a></li>
-                <li class="about"><a href="#section-1">About</a></li>
-                <li class="menu"><a href="subpage.html">Menu</a></li>
+                <li class="home"><a href="index.html">CLASSES</a></li>
+                <li class="about"><a href="#section-1">VIDEO</a></li>
+                <li class="menu"><a href="subpage.html">DESIGN</a></li>
+                <li class="menu"><a href="subpage.html">WEB</a></li>
             </ul>
         </nav>
     </header>
@@ -46,11 +47,13 @@
     <main class="site-main">
         <section class="hero animate-on-scroll">
             <div class="container">
+                <div id="heroanimation"></div>
                 <div class="parallax-element" data-parallax-speed="1">
                     <h1>MICHAEL</h1>
-                    <a href="#section-1" class="button">CLASSES</a>
+                    <h4>INTERFACE DESIGN</h4>
+                    <!-- <a href="#section-1" class="button">CLASSES</a>
                     <a href="#section-2" class="button">VIDEO</a>
-                    <a href="#section-3" class="button">DESIGN</a>
+                    <a href="#section-3" class="button">DESIGN</a> -->
                 </div>
                 <div class="bg-sky parallax-element" data-parallax-speed="-.2">
                     <img src="img/bg-sky.png" alt="Sky Background">
@@ -64,7 +67,7 @@
                 <div class="bg-front" data-parallax-speed="-.5">
                     <img src="img/bg-front.png" alt="Background Front">
                 </div>
-                <div class="bg-back parallax-element" data-parallax-speed="-.4">
+                <div class="bg-back parallax-element" data-parallax-speed="0">
                     <img src="img/bg-back.png" alt="Background Back">
                 </div>
                 <div class="bg-left parallax-element" data-parallax-speed="-.2" data-parallax-direction="horizontal">
@@ -73,13 +76,13 @@
                 <div class="bg-right parallax-element" data-parallax-speed=".2" data-parallax-direction="horizontal">
                     <img src="img/bg-right.png" alt="Background Back">
                 </div>
-                <div class="bg-mountains parallax-element" data-parallax-speed=".2">
+                <div class="bg-mountains parallax-element" data-parallax-speed=".4">
                     <img src="img/bg-mountains.png" alt="Background Front">
                 </div>
                 <div class="bg-treeleft parallax-element" data-parallax-speed=".5">
                     <img src="img/bg-treeleft.png" alt="Background Front">
                 </div>
-                <div class="bg-treeright parallax-element" data-parallax-speed=".3">
+                <div class="bg-treeright parallax-element" data-parallax-speed=".6">
                     <img src="img/bg-treeright.png" alt="Right Tree">
                 </div>
             </div>
@@ -161,6 +164,14 @@
     <!-- MAIN JS-->
 
     <script src="js/script.js"></script>
+
+    <!-- LOTTIE JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.0/lottie.min.js"
+        integrity="sha512-mdyZsdRAVdjUM6dKsRxu03wcxXMtt1UDkkQSDs+hZCtGoO0NsIgPHpYPoD7VzrlB/auvVFQlWP+w/6Co+SGi3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="js/index.js"></script>
 
 
 
