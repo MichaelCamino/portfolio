@@ -380,6 +380,7 @@ section {
   color: white;
   position: relative;
   z-index: 0;
+  margin: auto;
 }
 .hero h1 {
   margin-bottom: 0.1em;
@@ -387,7 +388,8 @@ section {
   font-weight: 900;
   color: white;
   font-size: 4em;
-  letter-spacing: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero h4 {
   font-family: brandon-grotesque, sans-serif;

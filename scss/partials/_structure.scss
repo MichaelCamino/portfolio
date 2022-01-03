@@ -75,13 +75,16 @@ section {
     color: white;
     position: relative;
     z-index: 0;
+    margin: auto;
     h1 {
         margin-bottom: .1em;
         font-family: $font-family-sans;
         font-weight: 900;
         color: white;
         font-size: 4em;
-        letter-spacing: 5px;
+        // letter-spacing: 5px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     h4 {
