@@ -33,14 +33,15 @@
         position: fixed;
         top: 0;
         right: 0;
-        width: 20vh;
+        width: 21vh;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transform: translate(0,-100%);
-        transition: 250ms all ease-out;
+        clip-path: circle(0px at 10em);
+        // transform: translate(0,-100%);
+        transition: 1s all ease-out;
         font-family: $font-family-sans;
         font-weight: 300;
         z-index: 19;
@@ -49,12 +50,15 @@
     li {
         font-size: 2vw;
         padding: 1em;
-        transform: translate(10%, 0);
-        transition: 250ms all ease-in-out 250ms;
+        transform: scale(0);
+        transition: 200ms all ease-in-out 250ms;
         // min-width: 20vw;
         opacity: 0;
         a{
             color: whitesmoke;
+            &:hover {
+                color: rgb(220, 187, 243);
+            }
         }
     }
 
@@ -106,10 +110,12 @@
 
         ul {
             transform: translate(0,0);
+            clip-path: circle(100% at 60% 40%);
+        
         }
 
         li {
-            transform: translate(0, 0);
+            transform: scale(1);
             opacity: 1;
         }
     }

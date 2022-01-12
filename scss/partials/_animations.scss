@@ -36,6 +36,33 @@
 //     }
 // }
 
+// LANDING PAGE ANIMATION
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+}
+
+body { 
+    animation: opacity 1s ease;
+    margin: 0;
+}
+
+// CLIP PATH
+.animate-clip-path,
+[data-sectionstate="inactive"] .animate-clip-path {
+    transition: all 1.5s ease-in-out;
+    opacity: 0;
+    clip-path: circle(0px at -10% 80%);
+}
+
+[data-sectionstate="active"] .animate-clip-path {
+    opacity: 1;
+    clip-path: circle(100%);
+}
+
+
 #section-1 {
 
     // ANIMATE FIRST COLUMN
@@ -120,6 +147,32 @@
 }
 
 [data-sectionstate="active"] .animate-slide-up {
+    opacity: 1;
+    transform: translate(0, 0)
+}
+
+// SLIDE RIGHT
+.animate-slide-right,
+[data-sectionstate="inactive"] .animate-slide-right {
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    transform: translate(-60px, 0)
+}
+
+[data-sectionstate="active"] .animate-slide-right {
+    opacity: 1;
+    transform: translate(0, 0)
+}
+
+// SLIDE UP
+.animate-slide-left,
+[data-sectionstate="inactive"] .animate-slide-left {
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    transform: translate(60px, 0)
+}
+
+[data-sectionstate="active"] .animate-slide-left {
     opacity: 1;
     transform: translate(0, 0)
 }

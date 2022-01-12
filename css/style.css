@@ -388,14 +388,17 @@ section {
   font-weight: 900;
   color: white;
   font-size: 4em;
+  letter-spacing: 2px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 0.7;
 }
 .hero h4 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
   color: whitesmoke;
   letter-spacing: 3px;
+  font-size: 1em;
 }
 .hero p {
   margin: 1em auto;
@@ -466,9 +469,40 @@ section {
   z-index: 4;
 }
 
-#section-1 {
-  position: relative;
-  z-index: -20;
+#classes {
+  margin-top: 3em;
+}
+#classes .container {
+  min-width: 80%;
+}
+#classes a {
+  color: white;
+  font-family: brandon-grotesque, sans-serif;
+  text-decoration: none;
+}
+#classes a:hover {
+  color: #dcbbf3;
+}
+#classes h2 {
+  margin: auto;
+  text-align: center;
+  font-size: 4em;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+#classes h3 {
+  color: white;
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 100;
+  letter-spacing: 5px;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+}
+#classes p {
+  margin: auto;
+  text-align: center;
+  color: #dcbbf3;
+  font-size: 1.2em;
 }
 
 .hide-visually {
@@ -507,7 +541,7 @@ section {
   position: fixed;
   top: 0;
   right: 0;
-  width: 20vh;
+  width: 21vh;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -522,10 +556,10 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: translate(0, -100%);
-          transform: translate(0, -100%);
-  -webkit-transition: 250ms all ease-out;
-  transition: 250ms all ease-out;
+  -webkit-clip-path: circle(0px at 10em);
+          clip-path: circle(0px at 10em);
+  -webkit-transition: 1s all ease-out;
+  transition: 1s all ease-out;
   font-family: brandon-grotesque, sans-serif;
   font-weight: 300;
   z-index: 19;
@@ -533,14 +567,17 @@ section {
 .site-header .site-nav li {
   font-size: 2vw;
   padding: 1em;
-  -webkit-transform: translate(10%, 0);
-          transform: translate(10%, 0);
-  -webkit-transition: 250ms all ease-in-out 250ms;
-  transition: 250ms all ease-in-out 250ms;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 200ms all ease-in-out 250ms;
+  transition: 200ms all ease-in-out 250ms;
   opacity: 0;
 }
 .site-header .site-nav li a {
   color: whitesmoke;
+}
+.site-header .site-nav li a:hover {
+  color: #dcbbf3;
 }
 .site-header .site-nav li.classes {
   -webkit-transition-delay: 0.4s;
@@ -581,10 +618,12 @@ section {
 .site-header .site-nav[data-navstate=open] ul {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
+  -webkit-clip-path: circle(100% at 60% 40%);
+          clip-path: circle(100% at 60% 40%);
 }
 .site-header .site-nav[data-navstate=open] li {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   opacity: 1;
 }
 
@@ -604,6 +643,37 @@ section {
 }
 
 /* ANIMATIONS */
+@-webkit-keyframes opacity {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+}
+body {
+  -webkit-animation: opacity 1s ease;
+          animation: opacity 1s ease;
+  margin: 0;
+}
+
+.animate-clip-path,
+[data-sectionstate=inactive] .animate-clip-path {
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+  opacity: 0;
+  -webkit-clip-path: circle(0px at -10% 80%);
+          clip-path: circle(0px at -10% 80%);
+}
+
+[data-sectionstate=active] .animate-clip-path {
+  opacity: 1;
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
+}
+
 #section-1 .one-half:nth-child(1) {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -683,6 +753,36 @@ section {
 }
 
 [data-sectionstate=active] .animate-slide-up {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.animate-slide-right,
+[data-sectionstate=inactive] .animate-slide-right {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  -webkit-transform: translate(-60px, 0);
+          transform: translate(-60px, 0);
+}
+
+[data-sectionstate=active] .animate-slide-right {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.animate-slide-left,
+[data-sectionstate=inactive] .animate-slide-left {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  -webkit-transform: translate(60px, 0);
+          transform: translate(60px, 0);
+}
+
+[data-sectionstate=active] .animate-slide-left {
   opacity: 1;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
