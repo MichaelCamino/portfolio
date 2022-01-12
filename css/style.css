@@ -506,6 +506,14 @@ section {
   border-bottom: 1px solid white;
   padding-bottom: 5px;
 }
+#classes ol {
+  color: white;
+}
+#classes li {
+  font-weight: 100;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
 #classes p {
   margin: auto;
   text-align: center;
