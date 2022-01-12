@@ -330,7 +330,7 @@ body {
 
 /* SITE-FOOTER */
 .site-footer {
-  background-color: black;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,7 +342,12 @@ body {
 .site-footer a {
   color: whitesmoke;
   text-decoration: none;
-  padding: 1em;
+  margin: 0.7em;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+}
+.site-footer a:hover {
+  color: #dcbbf3;
 }
 .site-footer ul {
   margin: 0;
@@ -351,6 +356,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 0;
+  font-size: 2em;
 }
 
 .site-main {
@@ -479,6 +485,8 @@ section {
   color: white;
   font-family: brandon-grotesque, sans-serif;
   text-decoration: none;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
 }
 #classes a:hover {
   color: #dcbbf3;
@@ -541,7 +549,7 @@ section {
   position: fixed;
   top: 0;
   right: 0;
-  width: 21vh;
+  width: 30vh;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -556,8 +564,8 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-clip-path: circle(0px at 10em);
-          clip-path: circle(0px at 10em);
+  -webkit-clip-path: circle(0px at 15em);
+          clip-path: circle(0px at 15em);
   -webkit-transition: 1s all ease-out;
   transition: 1s all ease-out;
   font-family: brandon-grotesque, sans-serif;
